@@ -18,4 +18,5 @@ CMakeFiles/parser.dir/main.c.o: \
  /usr/local/include/xlsxwriter/utility.h \
  /usr/local/include/xlsxwriter/workbook.h \
  /usr/local/include/xlsxwriter/worksheet.h \
- /usr/local/include/xlsxwriter/xmlwriter.h
+ /usr/local/include/xlsxwriter/xmlwriter.h \
+ /usr/local/include/yaml.h

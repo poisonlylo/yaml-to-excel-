@@ -11,6 +11,8 @@ stdio.h
 -
 xlsxwriter.h
 /Users/q/Desktop/parser/xlsxwriter.h
+yaml.h
+/Users/q/Desktop/parser/yaml.h
 
 /usr/local/include/xlsxwriter.h
 xlsxwriter/workbook.h
@@ -167,4 +169,12 @@ stdint.h
 -
 utility.h
 /usr/local/include/xlsxwriter/utility.h
+
+/usr/local/include/yaml.h
+stdlib.h
+-
+stdio.h
+-
+string.h
+-
 

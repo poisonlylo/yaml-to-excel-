@@ -89,6 +89,7 @@ parser_EXTERNAL_OBJECTS =
 parser: CMakeFiles/parser.dir/main.c.o
 parser: CMakeFiles/parser.dir/build.make
 parser: /usr/local/lib/libxlsxwriter.dylib
+parser: /usr/local/lib/libyaml.dylib
 parser: CMakeFiles/parser.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/q/Desktop/parser/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable parser"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/parser.dir/link.txt --verbose=$(VERBOSE)
