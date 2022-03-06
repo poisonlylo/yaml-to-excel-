@@ -13,26 +13,6 @@ struct expense {
 
 void parser(){
 
-    FILE  *ptr ;
-    int day,month,year;
-
-        char yaml_files[3][255] = {"site1.yaml" , "site2.yaml" , "site3.yaml"} ;
-
-        for (int i; i<3; i++ ){
-            ptr = fopen(yaml_files[i],"r+");
-            while (!feof(ptr)) {
-                fscanf(ptr,"date: %d/%d/%d "
-                           "local: %s "
-                           "task: %s "
-                           "sales: %d "
-                           ,&expenses[i].datetime.day, &expenses[i].datetime.month, &expenses[i].datetime.year, expenses[i].entrepot, expenses[i].tache, &expenses[i].sales );
-            }
-            fclose (ptr);
-        }
-        printf("%d-%d-%d\n", day, month, year);
-        printf("%s\n", expenses[1].entrepot);
-        printf("%s\n", expenses[1].tache);
-        printf("%d\n", expenses[1].sales);
 
 }
 
@@ -40,8 +20,25 @@ int main() {
 
 //    char yaml_files[3][255] = {"site1.yaml" , "site2.yaml" , "site3.yaml"} ;
   //  for( i=0; i<3; i++){
-        parser();
+       // parser();
   //  }
+
+    FILE  *ptr ;
+  //  int day,month,year;
+
+    char yaml_files[5][255] = {"site1.yaml" , "site2.yaml" , "site3.yaml","site4.yaml","site5.yaml"} ;
+
+    for (int i; i<5; i++ ){
+        ptr = fopen(yaml_files[i],"r+");
+        while (!feof(ptr)) {
+            fscanf(ptr,"date: %d/%d/%d "
+                       "local: %s "
+                       "task: %s "
+                       "sales: %d "
+                    ,&expenses[i].datetime.day, &expenses[i].datetime.month, &expenses[i].datetime.year, expenses[i].entrepot, expenses[i].tache, &expenses[i].sales );
+        }
+        fclose (ptr);
+    }
 
 
     /* Create a workbook and add a worksheet. */
@@ -71,7 +68,7 @@ int main() {
 
 
     /* Iterate over the data and write it out element by element. */
-    for (i = 0; i < 3; i++) {
+    for (i = 0; i < 5; i++) {
         /* Write from the first cell below the headers. */
         row = i + 1;
         worksheet_write_datetime(worksheet, row, col, &expenses[i].datetime, date_format);
